@@ -5,7 +5,7 @@ FILE=/ks/wait-background.sh; while ! test -f ${FILE}; do clear; sleep 0.1; done;
 bash ${FILE}
 
 # Install Istio
-export ISTIO_VERSION=1.24.0
+export ISTIO_VERSION=1.24.6
 curl -L https://istio.io/downloadIstio | ISTIO_VERSION=$ISTIO_VERSION TARGET_ARCH=x86_64 sh -
 
 # Set PATH in .bashrc because no subshell can set parent environment variables

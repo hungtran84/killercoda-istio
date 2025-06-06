@@ -5,10 +5,9 @@ Welcome to the Istio Service Mesh playground! This environment provides a fully 
 ## Environment Details
 
 ### Kubernetes Cluster
-- Version: 1.31
+- Version: 1.32
 - Setup: 2-node Kubernetes cluster (1 control-plane + 1 worker)
 - Container Runtime: containerd
-- CNI: Calico
 
 ### Istio Service Mesh
 - Version: 1.24.0
