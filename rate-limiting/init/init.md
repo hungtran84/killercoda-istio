@@ -1,3 +1,14 @@
+# Setting up your environment
+
+⏳ Please wait while your environment is being prepared...
+
+This includes:
+- Starting Kubernetes cluster
+- Installing Istio service mesh
+- Setting up necessary configurations
+
+This process may take a few minutes. Once complete, you'll see a "Environment is ready!" message.
+
 # Istio Rate Limiting
 
 Welcome to the Istio Rate Limiting scenario! This environment provides a fully configured Kubernetes cluster with Istio service mesh installed and ready to use.
