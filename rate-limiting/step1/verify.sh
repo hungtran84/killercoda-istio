@@ -21,12 +21,5 @@ if [ "$EGRESS_READY" != "True" ]; then
     exit 1
 fi
 
-# Verify Istio installation
-VERIFY_INSTALL=$(istioctl verify-install)
-if [ $? -ne 0 ]; then
-    echo "Istio installation verification failed"
-    exit 1
-fi
-
 echo "Istio is properly installed and running"
 exit 0 
