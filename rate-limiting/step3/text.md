@@ -14,8 +14,12 @@ kubectl get gateway
 
 Set up the ingress host and port:
 ```bash
-export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
-export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')
+# Get node1's IP (worker node)
+export INGRESS_HOST=$(kubectl get nodes -l kubernetes.io/hostname=node01 -o jsonpath='{.items[0].status.addresses[?(@.type=="InternalIP")].address}')
+
+# Get the NodePort
+export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}')
+
 export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
 ```{{exec}}
 
