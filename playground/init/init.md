@@ -10,7 +10,7 @@ Welcome to the Istio Service Mesh playground! This environment provides a fully 
 - Container Runtime: containerd
 
 ### Istio Service Mesh
-- Version: 1.24.0
+- Version: 1.24.6
 - Installation Method: istioctl
 - Profile: demo (includes all core features)
 
@@ -25,27 +25,5 @@ Welcome to the Istio Service Mesh playground! This environment provides a fully 
   - Grafana
   - Kiali
   - Jaeger
-
-## Verification
-
-You can verify your environment is ready by running:
-```bash
-# Check Kubernetes nodes
-kubectl get nodes
-
-# Verify Istio installation
-kubectl get pods -n istio-system
-
-# Check Istio version
-istioctl version
-```
-
-## What's Next?
-
-You can start:
-- Deploying sample applications
-- Configuring traffic management
-- Setting up security policies
-- Exploring observability features
 
 The environment is now ready for your service mesh experiments!
