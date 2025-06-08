@@ -1,0 +1,37 @@
+{
+  "title": "Istio Rate Limiting",
+  "description": "Learn how to implement rate limiting with Istio API Gateway.",
+  "details": {
+      "steps": [
+      {
+        "title": "Verify Istio Installation",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Deploy Bookinfo Application",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Configure API Gateway",
+        "text": "step3/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {"file": "wait-background.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "demo.yaml", "target": "/tmp", "chmod": "+x"}
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+} 
