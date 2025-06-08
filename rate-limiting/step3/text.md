@@ -12,6 +12,16 @@ Verify the gateway was created:
 kubectl get gateway
 ```{{exec}}
 
+Wait until all Bookinfo pods are ready:
+```bash
+kubectl wait --for=condition=Ready pods --all --timeout=300s
+```{{exec}}
+
+Verify all services have their endpoints ready:
+```bash
+kubectl get endpoints | grep -v "none"
+```{{exec}}
+
 Set up the ingress host and port:
 ```bash
 # Get node1's IP (worker node)
